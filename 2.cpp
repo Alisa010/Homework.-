@@ -15,8 +15,8 @@ void merge_sort(std::vector<int>& vec, int first, int middle,int last) {
      else {
         result.push_back(vec[right_index]);
         ++right_index;
-        swapCount += middle - first + 1 - left_index;
      }
+   ++swapCount;
  }
  while(left_index <= middle) {
   result.push_back(vec[left_index]);  
