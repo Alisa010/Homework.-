@@ -15,8 +15,9 @@ void merge_sort(std::vector<int>& vec, int first, int middle,int last) {
      else {
         result.push_back(vec[right_index]);
         ++right_index;
+        ++swapCount;
      }
-   ++swapCount;
+   
  }
  while(left_index <= middle) {
   result.push_back(vec[left_index]);  
@@ -49,8 +50,7 @@ int main() {
  int n;
  std::cin >> n;   
  std::vector<int> vec(n); 
-  ++swapCount;
-  for(int i = 0; i < n; ++i) {
+ for(int i = 0; i < n; ++i) {
     std::cin >> vec[i];
   }
   merge(0, vec.size() - 1, vec);
